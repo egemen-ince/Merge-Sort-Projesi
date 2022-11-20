@@ -1,0 +1,15 @@
+[16,21,11,8,12,22] -> Merge Sort
+
+1. Soru: Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+Öncelikle dizin ortadan ikiye parçalanır. -> [16,21,11] - [8,12,22]
+Yeni oluşan 2 dizi de tekrar ikiye parçalanır. -> [16] - [21,11] - [8,12] - [22]
+Her bir eleman tek başına kalana dek işlem devam eder. -> [16] - [21] - [11] - [8] - [12] - [22]
+Bu aşamadan itibaren elemanlar birbirleriyle kıyaslanarak birleşitirilmeye başlanır. -> [16] - [11,21] - [8,12] - [22]
+Birleştirme işlemine aynı şekilde devam edilir. [11,16,21] - [8,12,22]
+Son olarak tek bir dizi oluşur. -> [8,11,12,16,21,22]
+
+2. Soru: Big-O gösterimini yazınız.
+Bu yöntemde elemanları birleştirme aşamalarında yapılan kıyaslamalar sebebiyle Big-O = O(n) olur.
+Bu O(n) işlemi her defasında gerçekleştiği için gerçekleşme sıklığı da Big-O değerini etkileyecektir. Her seferinde yarıya inme durumu olduğu için 2**x = n denklemi yazılır.
+Bu sayede x = log(n) elde edilir.
+Sonuç olarak sistemin Big-O değeri = O(n*log(n)) olur.
